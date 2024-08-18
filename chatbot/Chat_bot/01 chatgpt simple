@@ -1,0 +1,21 @@
+# import openai
+
+# openai.api_key = "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"
+
+# completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "write an easy about IBM "}])
+# print(completion.choices[0].message.content)
+
+
+import openai
+
+openai.api_key = "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"
+
+completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        # {"role": "system", "content": "write an essay about IBM"},
+        {"role": "user", "content": "how you can list file in directory using Node.js"}
+    ]
+)
+
+print(completion.choices[0].message['content'])
